@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="name-input-section">
+        <h1>Welcome to the Quiz App!</h1>
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username">
+        <button onclick="enterName()">Start Quiz</button>
+    </div>
+    
+    <div id="home" class="quiz-section">
+        <h2>Select a Category</h2>
+        <select id="category">
+            <option value="geography">Geography</option>
+            <option value="history">History</option>
+            <option value="science">Science</option>
+        </select>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+    
+    <div id="quiz" class="quiz-section hidden">
+        <h2 id="welcome-message"></h2>
+        <div id="question-container">
+            <div id="question"></div>
+            <div id="options"></div>
+            <button onclick="giveHint()">Give Hint</button>
+            <div id="feedback"></div>
+        </div>
+        <div id="score-container">
+            <p id="score">Score: 0</p>
+            <p id="hints-left">Hints Left: 3</p>
+            <p id="time-left">15</p>
+            <button onclick="submitAnswer()">Submit Answer</button>
+        </div>
+    </div>
+    
+    <div id="result" class="quiz-section hidden">
+        <h2>Quiz Over!</h2>
+        <p id="final-score"></p>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+    
+    <div id="instructions" class="instructions hidden">
+        <h2>Instructions:</h2>
+        <ul>
+            <li>Select a category.</li>
+            <li>Answer each question within the time limit.</li>
+            <li>Use hints if needed.</li>
+            <li>Submit answers to move to the next question.</li>
+        </ul>
+    </div>
+</body>
+</html>
